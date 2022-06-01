@@ -39,7 +39,9 @@ export default function Home() {
           Search
         </Button>
       </form>
-      <Title order={2}>Reddit Results</Title>
+      {redditResults.length === 0 ? null : (
+        <Title order={2}>Reddit Results</Title>
+      )}
       <Grid>
         {redditResults.map((redditResult) => {
           return (
@@ -115,9 +117,11 @@ export default function Home() {
           );
         })}
       </Grid>
-      <Title order={2} style={{ marginTop: 48 }}>
-        YouTube Results
-      </Title>
+      {youtubeResults.length === 0 ? null : (
+        <Title order={2} style={{ marginTop: 48 }}>
+          YouTube Results
+        </Title>
+      )}
       <Grid>
         {youtubeResults.map((youtubeResult) => {
           return (
