@@ -14,7 +14,6 @@ export default function Home() {
     fetch(`/api/search?q=${searchTerm}`)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         setRedditResults(data.redditResults);
         setYoutubeResults(data.youtubeResults);
       });
@@ -76,19 +75,19 @@ export default function Home() {
                   </Grid.Col>
                   <Grid.Col
                     span={redditResult.data.thumbnail !== 'self' ? 8 : 12}
+                    style={{ minHeight: 183 }}
                   >
-                    <Text
-                      weight={500}
-                      size='lg'
-                      lineClamp={6}
-                      style={{ minHeight: 183 }}
-                    >
+                    <Text weight={500} size='lg' lineClamp={6}>
                       {redditResult.data.title}
                     </Text>
                   </Grid.Col>
                   {redditResult.data.thumbnail !== 'self' && (
                     <Grid.Col span={4}>
-                      <Image src={redditResult.data.thumbnail} height={160} />
+                      <Image
+                        src={redditResult.data.thumbnail}
+                        height={160}
+                        alt='reddit thumbnail'
+                      />
                     </Grid.Col>
                   )}
                   <Grid.Col span={12} style={{ alignSelf: 'flex-end' }}>
@@ -137,15 +136,11 @@ export default function Home() {
                       src={youtubeResult.snippet.thumbnails.medium.url}
                       fit='contain'
                       height={160}
+                      alt='video thumbnail'
                     />
                   </Grid.Col>
-                  <Grid.Col span={12}>
-                    <Text
-                      weight={500}
-                      size='lg'
-                      lineClamp={6}
-                      style={{ minHeight: 183 }}
-                    >
+                  <Grid.Col span={12} style={{ minHeight: 183 }}>
+                    <Text weight={500} size='lg' lineClamp={3}>
                       {youtubeResult.snippet.title}
                     </Text>
                   </Grid.Col>
