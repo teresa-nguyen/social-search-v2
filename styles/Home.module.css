@@ -1,3 +1,7 @@
+.main {
+  padding: 24px;
+}
+
 .input {
   width: 500px;
   margin-right: 12px;
@@ -11,8 +15,4 @@
 
 .header {
   text-align: center;
-}
-
-.App {
-  padding: 24px;
 }
