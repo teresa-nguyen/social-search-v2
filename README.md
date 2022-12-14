@@ -12,6 +12,6 @@ Demo: https://social-search-v2.herokuapp.com/
 
 ![Social Search v2 Reddit preview](/project-preview-reddit.png)
 
-### Youtbue Search Preview
+### Youtube Search Preview
 
 ![Social Search v2 Youtube preview](/project-preview-youtube.png)
