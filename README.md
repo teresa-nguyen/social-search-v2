@@ -1,5 +1,7 @@
 # Social Search v2
 
+Demo: https://social-search-v2.herokuapp.com/
+
 - Quickly search Reddit and Youtube.
 
 - This project was created using React and NextJS.
